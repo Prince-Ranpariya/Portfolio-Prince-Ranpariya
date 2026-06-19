@@ -232,7 +232,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="\images\prince-poster.png"
+              src="public/images/prince-avatar.png"
               alt="Prince Ranpariya - Shopify Web Developer"
               width={901}
               height={1599}
