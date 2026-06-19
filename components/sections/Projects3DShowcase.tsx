@@ -14,7 +14,7 @@ const PROJECTS_DATA = [
     id: 1,
     title: 'Sephani Nightwear',
     handle: 'sephani_nightwear',
-    image: '/images/sephani.jpg',
+    image: 'https://raw.githubusercontent.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/refs/heads/main/public/images/spall-sport.png',
     tags: ['Custom Theme', 'Liquid', 'SEO'],
     description: 'Premium nightwear storefront built on custom Shopify Liquid architecture. Engineered for high conversion rates, responsive styling, and custom section customizer setups.',
     url: 'https://www.sephani.co.in/',
