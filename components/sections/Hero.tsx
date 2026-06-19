@@ -68,7 +68,7 @@ export default function Hero() {
             {/* Avatar inline */}
             <span className="inline-flex items-center self-center" aria-hidden="true">
               <Image
-                src="prince-avatar.png"
+                src="https://raw.githubusercontent.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/refs/heads/main/prince-avatar.png"
                 alt="Prince Ranpariya"
                 width={80}
                 height={80}
