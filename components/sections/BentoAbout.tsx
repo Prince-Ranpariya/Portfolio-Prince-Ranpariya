@@ -85,8 +85,8 @@ export default function BentoAbout() {
             {/* Mini project previews */}
             <div className="flex gap-3 mt-2">
               {[
-                'https://prince-ranpariya.github.io/Portfolio-Prince-Ranpariya/PC%20%20.HERO%20BANNER.jpg',
-                'https://prince-ranpariya.github.io/Portfolio-Prince-Ranpariya/Screenshot%202026-05-10%20113256.png',
+                'https://raw.githubusercontent.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/refs/heads/main/public/images/sephani.jpg',
+                'https://raw.githubusercontent.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/refs/heads/main/public/images/spall-sport.png',
               ].map((src, i) => (
                 <div key={i} className="w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border" style={{ borderColor: 'var(--border-color)' }}>
                   <img src={src} alt="" className="w-full h-full object-cover" aria-hidden="true" />
