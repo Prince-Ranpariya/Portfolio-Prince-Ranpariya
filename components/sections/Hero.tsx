@@ -232,7 +232,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="public/images/prince-poster.jpg"
+              src="https://raw.githubusercontent.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/refs/heads/main/public/images/prince-poster.png"
               alt="Prince Ranpariya - Shopify Web Developer"
               width={901}
               height={1599}
