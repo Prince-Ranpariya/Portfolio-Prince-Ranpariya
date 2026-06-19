@@ -68,7 +68,7 @@ export default function Hero() {
             {/* Avatar inline */}
             <span className="inline-flex items-center self-center" aria-hidden="true">
               <Image
-                src="/images/prince-avatar.png"
+                src="D:\Anti-Gravity\Proffesional Portofolio\prince-portfolio\Uploadable\public\images\prince-avatar.png"
                 alt="Prince Ranpariya"
                 width={80}
                 height={80}
@@ -232,7 +232,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/images/prince-poster.png"
+              src="D:\Anti-Gravity\Proffesional Portofolio\prince-portfolio\Uploadable\public\images\prince-poster.png"
               alt="Prince Ranpariya - Shopify Web Developer"
               width={901}
               height={1599}
