@@ -87,7 +87,7 @@ export default function DeveloperIdentity() {
             {/* Poster / developer photo */}
             <div className="relative w-full max-w-[320px] lg:max-w-full rounded-[24px] overflow-hidden">
               <img
-                src="https://prince-ranpariya.github.io/Portfolio-Prince-Ranpariya/WhatsApp%20Image%202025-12-19%20at%204.37.43%20PM.jpeg"
+                src="https://raw.githubusercontent.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/refs/heads/main/prince-profile%20image.jpeg"
                 alt="Prince Ranpariya — Shopify Expert poster"
                 className="w-full object-cover"
                 style={{ filter: 'grayscale(30%)', minHeight: '380px', objectFit: 'cover', objectPosition: 'top' }}
