@@ -9,7 +9,7 @@ interface DownloadCVButtonProps {
 }
 
 export default function DownloadCVButton({
-  cvUrl = "https://prince-ranpariya.github.io/Portfolio-Prince-Ranpariya/Prince%20Ranpariya-CV%201.pdf.pdf",
+  cvUrl = "https://github.com/Prince-Ranpariya/Portfolio-Prince-Ranpariya/blob/main/Prince%20Ranpariya%20-Resume.pdf",
   fileName = "Prince_Ranpariya_CV.pdf",
 }: DownloadCVButtonProps) {
   const [status, setStatus] = useState<"idle" | "downloading" | "completed">("idle");
