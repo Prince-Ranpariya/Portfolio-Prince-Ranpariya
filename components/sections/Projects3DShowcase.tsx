@@ -8,7 +8,36 @@ import {
   ExternalLink,
 } from 'lucide-react'
 
-// Projects data loaded with local images
+// Self-contained image path resolver for GitHub Pages & Localhost
+function getImageUrl(path: string): string {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  if (typeof window !== 'undefined') {
+    if (window.location.pathname.startsWith('/Portfolio-Prince-Ranpariya')) {
+      return `/Portfolio-Prince-Ranpariya${cleanPath}`
+    }
+    return cleanPath
+  }
+  const prefix = process.env.NODE_ENV === 'production' ? '/Portfolio-Prince-Ranpariya' : ''
+  return `${prefix}${cleanPath}`
+}
+
+// Fallback handler if image fails to load with/without GitHub Pages prefix
+function handleImageError(e: React.SyntheticEvent<HTMLImageElement>) {
+  const target = e.currentTarget
+  if (target.dataset.tried) return
+  target.dataset.tried = 'true'
+  if (target.src.includes('/Portfolio-Prince-Ranpariya/')) {
+    target.src = target.src.replace('/Portfolio-Prince-Ranpariya', '')
+  } else {
+    try {
+      const url = new URL(target.src)
+      target.src = `${url.origin}/Portfolio-Prince-Ranpariya${url.pathname}`
+    } catch {
+      // ignore
+    }
+  }
+}
+
 // Projects data loaded with local images
 const PROJECTS_DATA = [
   {
@@ -169,9 +198,10 @@ export default function Projects3DShowcase() {
                 className="absolute w-[300px] h-[390px] rounded-[28px] overflow-hidden border border-[var(--border-color)] shadow-2xl bg-[var(--bg-card)] touch-none"
               >
                 <img
-                  src={project.image}
+                  src={getImageUrl(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover"
+                  onError={handleImageError}
                 />
                 
                 {/* Overlay Gradient Mask */}
@@ -234,7 +264,7 @@ function AccordionCard({
   isActive,
   onMouseEnter,
 }: {
-  project: any
+  project: typeof PROJECTS_DATA[0]
   isActive: boolean
   onMouseEnter: () => void
 }) {
@@ -281,7 +311,7 @@ function AccordionCard({
       {/* Background Project Image with Parallax */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <img
-          src={project.image}
+          src={getImageUrl(project.image)}
           alt={project.title}
           className={`w-full h-full object-cover origin-center transition-[transform,opacity,filter] duration-700 ease-out ${
             isActive ? 'scale-110 opacity-100 blur-0' : 'scale-100 opacity-40 blur-[0.5px]'
@@ -290,6 +320,7 @@ function AccordionCard({
             transform: isActive ? `scale(1.1) translateX(${tilt.px}px) translateY(${tilt.py}px)` : 'scale(1)',
             transition: tilt.px === 0 ? 'transform 0.5s ease-out' : 'none',
           }}
+          onError={handleImageError}
         />
       </div>
 
